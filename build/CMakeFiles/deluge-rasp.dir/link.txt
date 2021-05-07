@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/deluge-rasp.dir/main.cpp.o -o deluge-rasp 
