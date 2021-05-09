@@ -7,10 +7,11 @@ find_package(oatpp 1.2.5 REQUIRED)
 
 
 
-set(SOURCE main.cpp)
+set(SOURCE main.cpp manage/manager.cpp)
+set(HEADERS dto/torrent.h manage/manager.h)
 
 
-add_executable(deluge-rasp ${SOURCE})
+add_executable(deluge-rasp ${SOURCE} ${HEADERS})
 
 target_link_libraries(deluge-rasp
         PUBLIC oatpp::oatpp
