@@ -2,4 +2,9 @@
 #include <string>
 
 using namespace std;
-int addTorrent(string magnet,string password);
+
+char* getPath();
+string getDir(char* path);
+string addTorrent(string magnet,string password);
+string getResult(string path);
+string getInfo();
