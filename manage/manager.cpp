@@ -56,8 +56,8 @@ char* getPath(){
 
 
 string addTorrent(string magnet,string password){
-	if(!system(NULL))return "Failed";
-	if(PASSWORD != password) return "Failed";
+	if(!system(NULL))return "Failed CMD error";
+	if(PASSWORD != password) return "WRONG PASSWORD";
 	char* exePath = getPath();
 	string path =  getDir(exePath) + "/result.txt";
 	string cmd = COMMANDADD+string("\"")+magnet+string("\"")+string(" > ")+path;
@@ -69,7 +69,7 @@ string addTorrent(string magnet,string password){
 }
 
 string getInfo(){
-	if(!system(NULL))return "Failed";
+	if(!system(NULL))return "CMD error";
 	char* exePath = getPath();
 	string path =  getDir(exePath) + "/info.txt";
 	string cmd = COMMANDINFO+string(" > ")+path;

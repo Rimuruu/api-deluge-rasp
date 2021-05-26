@@ -70,7 +70,7 @@ public:
 	  		 		return ResponseFactory::createResponse(Status::CODE_200, "TORRENT ADDED\n");
 	  		 	}
 	  		 	else {
-	  		 		return ResponseFactory::createResponse(Status::CODE_403, "UNKNOWN ERROR\n");	
+	  		 		return ResponseFactory::createResponse(Status::CODE_403, r.c_str());	
 	  		 	}
 	  		 }
 	  		 else{
